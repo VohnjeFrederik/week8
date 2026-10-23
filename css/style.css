@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root{
+    --primary-color: #454545;
+    --primary-elements: #85cbe9;
+    --primary-elements2: #609bb4;
+    --primary-background: #dadada;
+    --heading-font: "Fustat", sans-serif;
+    --body-font: "Roboto", sans-serif;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: var(--primary-background);
+    font-family: var(--body-font);
+    color: var(--primary-color);
+    display: grid;
+}
+
+.sinine-vasak {
+    position: fixed;
+    top: 0;
+    width: 45%;
+    height: 100%;
+    background-color: var(--primary-elements);
+    z-index: -2;
+}
+
+.sinine-all {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: var(--primary-elements2);
+    z-index: -1;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, auto);
+    grid-row: auto;
+    width: auto;
+}
+
+header h1 {
+    grid-column: 2/2;
+    grid-row: 1/1;
+    font-family: var(--heading-font);
+    font-weight: 800;
+    font-size: 3rem;
+    margin-right: 15rem;
+    margin-top: 3rem;
+}
+
+.field{
+    grid-column: 2/2;
+    grid-row: 1/1;
+    padding: 1rem;
+    font-family: var(--body-font);
+    font-size: 1.5rem;
+}
+
+.image-container {
+    grid-column: 1/1;
+    grid-row: 1/1;
+    width: 600px;
+    height: auto;
+}
+
+
+.main {
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+
+}
+
+
+.haridus {
+    grid-column: 1/1;
+    grid-row: 1/2;
+    font-family: var(--body-font);
+    font-size: 2.3rem;
+}
+
+.varasemkogemus {
+    grid-column: 2/2;
+    grid-row: 2/2;
+    font-family: var(--body-font);
+    font-size: 2.3rem;
+}
+
+.isikukirjeldus {
+    grid-column: 2/2;
+    grid-row: 1/1;
+    font-family: var(--body-font);
+    font-size: 2.3rem;
+}
+
+.haridus-list, .kogemus-list, .positiivsedtunnused {
+    list-style: disc;
+    margin: 2.5rem;
+}
+
+.footer-stuff {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, auto);
+    grid-row: auto;
+    width: auto;
+    height: auto;
+}
+
+.kontakt {
+    grid-column: 1/2;
+    grid-row: 2/2;
+    font-family: var(--body-font);
+    font-size: 2.3rem;
+    margin: 2.5rem;
+    list-style: none;
+}
+
+.lisa {
+    grid-column: 2/2;
+    grid-row: 1/1;
+    font-family: var(--body-font);
+    font-size: 2.3rem;
+    
+}
+
+.lisa-info {
+    list-style: disc;
+    margin: 2.5rem;
+}
+
+@media (max-width: 480px){
+
+    .sinine-vasak {
+        width: 10%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -2;
+
+    }
+
+    .sinine-all {
+        width: 100%;
+        height: 10%;
+        z-index: -1;
+
+    }
+
+    .container {
+        width: 90%;
+        text-align: center;
+        
+    }
+
+
+    .header {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+    }
+
+    .header h1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .image-container {
+        grid-column: 1/1;
+        grid-row: 2/2;
+    }
+
+    .field {
+        grid-column: 1/1;
+        grid-row: 3/3;
+    }
+
+    .main {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+    }
+
+    .haridus {
+        grid-column: 1/1;
+        grid-row: 1/1;
+    }
+
+    .varasemkogemus {
+        grid-column: 1/1;
+        grid-row: 2/2;
+    }
+
+    .isikukirjeldus {
+        grid-column: 1/1;
+        grid-row: 3/3;
+    }
+
+    .footer-stuff {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+    }
+
+    .kontakt {
+        grid-column: 1/1;
+        grid-row: 2/2;
+    }
+
+    .lisa {
+        grid-column: 1/1;
+        grid-row: 1/1;
+    }
+}
